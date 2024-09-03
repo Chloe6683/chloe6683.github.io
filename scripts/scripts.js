@@ -131,8 +131,6 @@ function artworkPage() {
 	
 	document.getElementById("artworkPage").innerHTML = "";
 	
-	console.log(artContent);
-	
 	for (let i = 0; i < artContent.length; i++) {
 		
 		// Create title for each Category
@@ -152,8 +150,10 @@ function artworkPage() {
 		div.setAttribute("class", "row");
 		document.getElementById("artworkPage").appendChild(div);
 		
+		// Create images
 		for (let j = 0; j < artContent[i].images.length; j++) { 
 		
+			// images share a row
 			const col = document.createElement("div");
 			col.setAttribute("class", "col my-3");
 			
@@ -164,6 +164,8 @@ function artworkPage() {
 			img.style["height"] = "100%";
 			img.style["object-fit"] = "cover";
 			img.style["object-position"] = "25% 25%";
+			
+			img.setAttribute("onclick", "enlargeImage('" + artContent[i].images[j] + "')");
 			
 			col.appendChild(img);
 			document.getElementById(categoryId).appendChild(col);
@@ -251,6 +253,29 @@ function aboutPage() {
 		
 		
 	}
+	
+}
+
+function enlargeImage(src) {
+	
+	console.log(src);
+	
+	document.getElementById("modalContainer").innerHTML = "";
+	
+	const img = document.createElement("img");
+	img.src = src;
+	img.setAttribute("style", "width:60%");
+	img.setAttribute("onclick", "closeModal()");
+	
+	document.getElementById("modalContainer").appendChild(img);
+	
+	document.getElementById("modalContainer").style.display = "block";
+	
+}
+
+function closeModal() {
+	
+	document.getElementById("modalContainer").style.display = "none";
 	
 }
 
