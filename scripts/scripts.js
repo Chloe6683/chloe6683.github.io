@@ -264,8 +264,9 @@ function enlargeImage(src) {
 	
 	const img = document.createElement("img");
 	img.src = src;
-	img.setAttribute("style", "width:60%");
+	img.setAttribute("style", "width:60%;");
 	img.setAttribute("onclick", "closeModal()");
+	img.setAttribute("style", "vertical-align:middle;");
 	
 	document.getElementById("modalContainer").appendChild(img);
 	
