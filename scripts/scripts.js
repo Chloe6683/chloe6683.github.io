@@ -91,6 +91,10 @@ function hidePages() {
 	document.getElementById("artworkPage").style.display = "none";
 	document.getElementById("aboutPage").style.display = "none";
 	
+	document.getElementById("showreelPage").innerHTML = "";
+	document.getElementById("artworkPage").innerHTML = "";
+	document.getElementById("aboutPage").innerHTML = "";
+	
 }
 
 function showreelPage() {
@@ -100,8 +104,6 @@ function showreelPage() {
 	
 	hidePages();
 	document.getElementById("showreelPage").style.display = "block";
-	
-	document.getElementById("showreelPage").innerHTML = "";
 	
 	const vid = document.createElement("video");
 	
@@ -128,8 +130,6 @@ function artworkPage() {
 	hidePages();
 	
 	document.getElementById("artworkPage").style.display = "block";
-	
-	document.getElementById("artworkPage").innerHTML = "";
 	
 	for (let i = 0; i < artContent.length; i++) {
 		
@@ -185,8 +185,6 @@ function aboutPage() {
 	
 	hidePages();
 	document.getElementById("aboutPage").style.display = "block";
-	
-	document.getElementById("aboutPage").innerHTML = "";
 	
 	for (let i = 0; i < aboutContent.length; i++) {
 		
@@ -265,7 +263,7 @@ function enlargeImage(src) {
 	const img = document.createElement("img");
 	img.src = src;
 	img.setAttribute("style", "width:60%;");
-	img.setAttribute("onclick", "closeModal()");
+	document.getElementById("modalContainer").setAttribute("onclick", "closeModal()");
 	img.setAttribute("style", "vertical-align:middle;");
 	
 	document.getElementById("modalContainer").appendChild(img);
