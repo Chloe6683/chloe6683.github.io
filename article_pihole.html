@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+
+        <title>PinkIvy | PiHole</title>
+
+        <script type="text/javascript" src="scripts/header.js"></script>
+        <script type="text/javascript" src="scripts/sidebar.js"></script>
+        <script type="text/javascript" src="scripts/footer.js"></script>
+
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <link rel="stylesheet" type="text/css" href="style/blink.css" />
+
+    </head>
+
+    <body onLoad="header(), sidebar(), footer()">
+
+        <div id="main">
+
+            <span id="header"></span> <!-- Dynamically loads header -->
+
+                <div id="site_content">
+
+                    <div class="sidebar" id="sidebar"></div> <!-- Dynamically loads sidebar -->
+
+                    <div id="content">
+
+                        <h2>What is PiHole?</h2>
+                        <p>PiHole is a raspberry pi that sits between your router and the internet, quietly filtering out adverts and making sure they're never even allowed to enter your network. This is a short article on how to set one up, and why you'd want to.</p>
+
+                        <h2>Why would I want PiHole?</h2>
+                        <ul>
+                            <li>- No adverts on your network</li>
+                            <li>- Speeds up your internet (who'd have thought ads slowed it down so much)</li>
+                            <li>- It's easy to set up and easier to maintain</li>
+                        </ul>
+
+                        <h2>You will need:</h2>
+                        <ul>
+                            <li>- A raspberry pi (3 or newer) or old pc (and the power cables needed to run it)</li>
+                            <li>- An SD card (doesn't need much space, 16gb is probably enough)</li>
+                            <li>- 30 mins to an hour</li>
+                            <li>- An ethernet cable to your router</li>
+                        </ul>
+
+                        <h2>Step 1: Install an OS</h2>
+                        <p>
+                            An OS (operating system) is needed for your raspberry pi to run. From a PC or laptop, go to <a href="https://www.raspberrypi.com/software/">this site</a> and download the Raspberry Pi Imager, a piece of software that will allow you to put an OS onto your SD card.
+                        </p>
+                        <p>Choose Raspberry Pi OS (32-bit), select your SD card, and flash the OS to it. If you don't have a spare monitor and will be connecting to the raspberry pi from a pc later, also enable SSH in the settings and give it the details of your wifi network. SSH allows you to connect to the raspberry pi from a different computer, without having to connect a keyboard, mouse, or monitor to the raspberry pi itself. Also, create a username and password here that you will use to connect to it, and set the hostname to the name you would like to give your pi ("pihole" works well here).</p>
+
+                        <h2>Step 2: Set up a Static IP</h2>
+                        <p>Once you have your OS on your SD card, insert it into your raspberry pi and plug in its power cable, and ethernet to the router if you have it (I highly recommend one, as it will vastly increase the speed). A light should turn on on the pi.</p>
+                        <p>Once the light is on, go to your router's administration page. Normally you can do this by typing "192.168.0.1" into your url bar, but your router will say on the side if this is different. Use the login on the side of your router (not your wifi login, the other one, the username is often "admin") on this page. Different routers have different ways to assign a static IP, but <a href="https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245">this page</a> has a guide that will work for most.</p>
+
+                        <h2>Step 3: Connect to your raspberry pi</h2>
+                        <p>If you opted to connect to your raspberry pi wirelessly with SSH, open up command prompt on your PC or laptop. Type the following command:</p>
+
+                        <p><code><span class="blink">|</span> ssh username@hostname.local</code></p>
+
+                        <p>"username" should be the username you created earlier, and "hostname" the name you gave your device. It will ask for your password, enter it and you will be wirelessly connected to the pi over SSH. Your command prompt is now entering commands on the pi, rather than your PC. </p>
+
+                        <p>Now you are in your pi, run the following:</p>
+
+                        <p><code><span class="blink">|</span> curl -sSL https://install.pi-hole.net | bash</code></p>
+
+                        <p>Follow the instructions that the setup gives you. When asked for a network interface, choose ethernet (usually eth0), and make sure to select "Yes" when asked if you would like to use a static IP, setting the same IP you configured on your router earlier. Any DNS provider works, but I tend to prefer Cloudfare as they don't sell data or store logs for more than 24hrs. When asked for your blocklists, select Yes to use the reccomended list. Enable the web interface when prompted, and have the setup install the required modules to run it.</p>
+
+                        <p>You will then be prompted to choose whether or not to enable query logging. This will keep track of which sites have been accessed by which devices, and I would recommend turning it off if you share the network. If it is your own network, you can enable it to be able to later see your statistics.</p>
+                
+                        <p>Make sure to make a note of the Admin Webpage login password you are given, and head to the interface at the url it gives you. (Usually <a href="http://pi.hole/admin">pi.hole/admin</a>)</p>
+
+                        <h2>Step 4: Using PiHole</h2>
+                        <p>Now that your PiHole is setup, it's a matter of configuring your network to use it. There are two main methods you can use to do this.</p>
+
+                        <ul>
+                            <li>- Have the whole network use PiHole by default (recommended)</li>
+                            <li>- Use PiHole on a per-device basis</li>
+                        </ul>
+            
+                        <p>To have the whole network use PiHole, you will need to return to your router's admin panel. From here, you can configure the DNS server to the static IP you assigned your raspberry pi earlier. I recommend not using a backup DNS if you go this route, as occasionally the router may use it and fail to block adverts.</p>
+
+                        <p>To use the PiHole only on certain devices, you must manually configure the DNS of each device to that of the raspberry pi. While this is fairly easy on PCs, it is only possible on certain versions of android, and exceptionally difficult on iOS. To configure this, go to your wifi settings for the network your PiHole is on, and look for DNS in the settings. Update it to match your pi's IP.</p>
+
+                    </div>
+
+            </div>
+
+            <div id="footer"></div> <!-- Dynamically loads footer -->
+
+        </div>
+
+    </body>
+
+</html>
