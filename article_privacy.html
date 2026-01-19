@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+
+        <title>PinkIvy | PiHole</title>
+
+        <script type="text/javascript" src="scripts/header.js"></script>
+        <script type="text/javascript" src="scripts/sidebar.js"></script>
+        <script type="text/javascript" src="scripts/footer.js"></script>
+
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <link rel="stylesheet" type="text/css" href="style/blink.css" />
+
+    </head>
+
+    <body onLoad="header(), sidebar(), footer()">
+
+        <div id="main">
+
+            <span id="header"></span> <!-- Dynamically loads header -->
+
+                <div id="site_content">
+
+                    <div class="sidebar" id="sidebar"></div> <!-- Dynamically loads sidebar -->
+
+                    <div id="content">
+                    
+                        <p>This page is a work-in-progress. If it hasn't been updated in a while, or if you have suggestions, feel free to let me know.</p>
+
+                        <h2>Why move?</h2>
+                        <p>In recent years, major tech companies have expanded their surveillance and anti-consumer practises to the point many people are stuck searching for alternatives. At the same time, many of these companies are actively attempting to lock down their ecosystems further, to make it harder to swap in the future. </p>
+                        
+                        <h2>Where to start?</h2>
+                        <p>Moving away from big tech companies is extremely difficult. Windows shows adverts directly in the start menu. Android is being locked down by google's refusal to release OEMs for custom ROMs. Amazon owns 30% of all cloud computing globally.</p>
+                        
+                        <p>Ultimately, it is almost impossible to escape these ecosystems all at once without burning all of your technology and moving to a remote island. The best place to start is by being aware of your technology use, and ensuring you don't become more dependant on it in the future.</p>
+                        
+                        <p>Consider your email. While google's Gemini reads your emails, switching everything that is sent to your Gmail is a monumental task. Instead of burning yourself out attempting it from the start, try setting up an email account elsewhere and using that in the future. <a href="https://proton.me/">Proton</a> even has a feature that enables forwarding your old Gmail, while you change your email address gradually.</p>
+                        
+                        <h2>[Android] Moving away from Google</h2>
+                        <p>One of the easiest things to do is to stop using Google directly. Replacing Google services with alternatives is a good step, and often open-source alternatives are more user friendly.</p>
+                        <p>In moving away from Google, I personally try my best to diversify who provides these services, in case Proton or DuckDuckGo decide to go down the same path.</p>
+                        
+                        <p>Some replacements include:</p>
+                        <ul>
+                            <li>- Google Play: <a href="https://f-droid.org/en/">F-Droid</a> for free open source software. All listed replacements (besides F-Droid itself) are available here unless stated otherwise. <a href="https://auroraoss.com/aurora-store">Aurora Store</a> for apps from the Google play store without a Google account.</li>
+                            <li>- Google Search: <a href="https://www.duckduckgo.com">DuckDuckGo</a>.</li>
+                            <li>- Google Chrome: <a href="https://www.duckduckgo.com">DuckDuckGo</a>.</li>
+                            <li>- Google Calendar, Contacts, Keyboard, Photos: <a href="https://github.com/FossifyOrg">Fossify</a>.</li>
+                            <li>- Youtube: <a href="https://revanced.to/youtube/#download-apk">YouTube Revanced</a>. While not a true YouTube replacement like <a href="https://github.com/Chocobozzz/PeerTube">PeerTube</a>, it allows access to YouTube servers through <a href="https://github.com/microg">MicroG</a>, an open-source reimplementation of Google's android libraries.</li>
+                        </ul>
+                        
+                        
+ 
+                    </div>
+
+            </div>
+
+            <div id="footer"></div> <!-- Dynamically loads footer -->
+
+        </div>
+
+    </body>
+
+</html>

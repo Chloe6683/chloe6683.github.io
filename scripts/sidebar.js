@@ -6,15 +6,14 @@ function sidebar() {
         
         <div>
             <h1>Pinned Page</h1>
-            <h4>PiHole</h4>
-            <p>A guide on how to set up a PiHole for your network.<br /><a href="article_pihole.html">Read more</a></p>
+            <h4>You Should Have a Website</h4>
+            <p>Why you should have your own personal site.<br /><a href="article_website.html">Read more</a></p>
 
-            <h1>Useful Links</h1>
+            <h1>Other Links</h1>
             <ul>
-                <li><a href="#"><img src="icons/link.png" alt="Link"> This is a link.</a></li>
-                <li><a href="#"><img src="icons/link.png" alt="Link"> This is a link.</a></li>
-                <li><a href="#"><img src="icons/link.png" alt="Link"> This is a link.</a></li>
-                <li><a href="#"><img src="icons/link.png" alt="Link"> This is a link.</a></li>
+                <li><a href="article_pihole.html"><img src="icons/link.png" alt="Link"> Pi-Hole Adblocker</a></li>
+                <li><a href="article_privacy.html"><img src="icons/link.png" alt="Link"> Privacy-Focused Technology</a></li>
+                <li><a href="article_music.html"><img src="icons/link.png" alt="Link"> I'm Listening To</a></li>
             </ul>
         </div>
     `
