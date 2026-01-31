@@ -1,0 +1,47 @@
+[
+  {
+    "id": "_meta",
+    "name": "The Blame Game",
+    "author": "chloeispink (±)",
+    "logo": "https://user-images.klutzbanana.com/lytqjtlr1zpf2jr9tsweis8r.png"
+  },
+  {
+    "id": "warden_fromthegrave",
+    "name": "Warden  ±",
+    "image": [
+      "https://www.bloodstar.xyz/p/chloe6683/FromtheGrave/warden_fromthegrave.png"
+    ],
+    "team": "townsfolk",
+    "edition": "fromthegrave",
+    "ability": "Townsfolk you nominate cannot die today.",
+    "flavor": "Not you!",
+    "firstNight": 0,
+    "otherNight": 0,
+    "setup": false
+  },
+  "towncrier",
+  "soldier",
+  "devilsadvocate",
+  "sentinel",
+  {
+    "id": "specter_chloeispinkalmanac",
+    "name": "Specter  ±",
+    "image": [
+      "https://www.bloodstar.xyz/p/chloe6683/FromtheGrave/specter_fromthegrave.png"
+    ],
+    "team": "outsider",
+    "ability": "You may register as alive or dead, and think you are, even if dead.",
+    "flavor": "boo",
+    "firstNight": 0,
+    "otherNight": 0,
+    "setup": false
+  },
+  "imp",
+  "drunk",
+  "vizier",
+  "investigator",
+  "artist",
+  "vortox",
+  "sailor",
+  "bootlegger"
+]

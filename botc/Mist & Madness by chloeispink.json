@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Mist & Madness",
+    "author": "chloeispink (±)",
+    "id": "_meta",
+    "logo": "https://user-images.klutzbanana.com/jh4uunrtrv0a4aoj48e5ven8.png"
+  },
+  "oracle",
+  "innkeeper",
+  "acrobat",
+  {
+    "id": "urchin_fromthegrave",
+    "name": "Urchin  ±",
+    "team": "townsfolk",
+    "edition": "fromthegrave",
+    "ability": "If you would die at night, you instead become the good character you were mad as (if any).",
+    "flavor": "I'm gonna grow up to be just like you!",
+    "firstNight": 0,
+    "otherNightReminder": "If the Urchin died tonight, if they were mad as another good character, wake them and show them the YOU ARE info token and that character token.",
+    "otherNight": 2,
+    "image": [
+      "https://www.bloodstar.xyz/p/chloe6683/FromtheGrave/urchin_fromthegrave.png"
+    ],
+    "setup": false
+  },
+  "fool",
+  "pacifist",
+  "drunk",
+  "mutant",
+  "cerenovus",
+  "vigormortis",
+  "lleech",
+  "bootlegger",
+  "sentinel",
+  {
+    "id": "tombcrawler_fromthegrave",
+    "name": "Tombcrawler  ±",
+    "image": [
+      "https://www.bloodstar.xyz/p/chloe6683/FromtheGrave/tombcrawler_fromthegrave.png"
+    ],
+    "team": "minion",
+    "edition": "fromthegrave",
+    "ability": "The first executed evil lives but registers as dead. 1 good player knows a Tombcrawler is in play.",
+    "flavor": "And so his tomb was engraved: \"Don't bug me, I'm trying to sleep!\"",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Entombed",
+      "No Ability"
+    ],
+    "setup": false,
+    "jinxes": [
+      {
+        "id": "zombuul",
+        "reason": "The Zombuul doesn't count towards evil executions."
+      }
+    ]
+  }
+]
