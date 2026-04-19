@@ -11,9 +11,10 @@ function sidebar() {
 
             <h1>Other Links</h1>
             <ul>
-                <li><a href="article_pihole.html"><img src="icons/link.png" alt="Link"> Pi-Hole Adblocker</a></li>
-                <li><a href="article_privacy.html"><img src="icons/link.png" alt="Link"> Privacy-Focused Technology</a></li>
                 <li><a href="article_music.html"><img src="icons/link.png" alt="Link"> I'm Listening To</a></li>
+                <li><a href="article_botc.html"><img src="icons/link.png" alt="Link"> Blood on the Clocktower</a></li>
+                <li><a href="article_1kbwc.html"><img src="icons/link.png" alt="Link"> 1,000 Blank White Cards</a></li>
+                
             </ul>
         </div>
     `
